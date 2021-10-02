@@ -1,5 +1,5 @@
 # jupyter-nltk
-Is a Jupyter Docker stacks SciPy + NLTK
+[Is a Jupyter Docker stacks SciPy + NLTK](https://www.mendeley.com/download-reference-manager/linux)
 
 ## Setup
 Pull a Jupyter scipy-notebook image
@@ -22,6 +22,14 @@ docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v ${PWD}\Project\tedyfrba\nlp
 ```
 
 ## Usage
+If container was stopped just run
+```
+docker start jupyter-nltk
+```
+and access to url (or similar) given in `docker logs jupyter-nltk`
+```
+http://127.0.0.1:8888/lab?token=152078005ecb52e11970f6641ed28e4919b1aac25fc57110
+```
 ### volumes
 `${PWD}:/home/jovyan/work` workspace for the notebooks.
 `${PWD}\data:/home/jovyan/nltk_data` avoid to download the data all the time.

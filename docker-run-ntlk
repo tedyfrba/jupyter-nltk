@@ -1,0 +1,11 @@
+#!/bin/bash
+docker pull jupyter/scipy-notebook
+
+docker build -t jupyter-nltk .
+
+### linux
+#docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v ${PWD}:/home/jovyan/work -v "$PWD"/data:/home/jovyan/nltk_data --name jupyter-nltk jupyter-nltk
+
+### windows powersell command
+### files saved on homeuser\Project\tedyfrba\nlp\
+docker run -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v ${PWD}\Project\tedyfrba\nlp:/home/jovyan/work -v ${PWD}\Project\tedyfrba\nlp\data:/home/jovyan/nltk_data --name jupyter-nltk jupyter-nltk
